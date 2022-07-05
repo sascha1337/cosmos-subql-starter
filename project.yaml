@@ -9,7 +9,7 @@ runner:
     name: "@subql/query"
     version: "*"
 description: >-
-  This project can be use as a starting point for developing your Cosmos (Juno) based SubQuery project
+  This project can be use as a starting point for developing your Cosmos (Cosmos Hub) based SubQuery project
 repository: https://github.com/subquery/juno-subql-starter
 schema:
   file: ./schema.graphql
@@ -49,7 +49,7 @@ dataSources:
             type: transfer
             messageFilter:
               type: "/cosmos.bank.v1beta1.MsgSend"
-              
+
         - handler: handleMessage
           kind: cosmos/MessageHandler
           filter:
